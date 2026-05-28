@@ -149,7 +149,7 @@ class LLMService:
                 provider = OpenAIProvider(self._settings)
         except Exception as exc:  # noqa: BLE001 - we want a clean error for any init failure
             raise AIProviderError(
-                "Failed to initialise AI provider",
+                "Failed to initialise LLM provider",
                 details={"provider": self._settings.ai_provider, "error": str(exc)},
             ) from exc
 
@@ -160,6 +160,6 @@ class LLMService:
             raise
         except Exception as exc:  # noqa: BLE001
             raise AIProviderError(
-                "AI provider call failed",
+                "LLM provider call failed",
                 details={"provider": provider.name, "error": str(exc)},
             ) from exc

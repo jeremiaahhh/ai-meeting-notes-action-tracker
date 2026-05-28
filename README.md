@@ -1,4 +1,4 @@
-# AI Meeting Notes & Action Tracker
+# Meeting Notes & Action Tracker
 
 Turn raw meeting transcripts into structured notes: executive summary, key
 decisions, action items (with owners and due dates), and unresolved questions.
@@ -6,7 +6,7 @@ Track follow-ups, export to Markdown, and ship the whole stack with a single
 `docker compose up`.
 
 The stack runs end-to-end **without an API key** thanks to a built-in mock
-AI provider. Set `USE_MOCK_AI=false` and supply an `OPENAI_API_KEY` or
+LLM provider. Set `USE_MOCK_AI=false` and supply an `OPENAI_API_KEY` or
 `ANTHROPIC_API_KEY` to switch providers; nothing else changes.
 
 <p>
@@ -36,7 +36,7 @@ update automatically.
 Recommended capture flow:
 
 1. `bash scripts/seed.sh` to load the three sample meetings
-2. Capture dashboard, meeting detail (AI notes tab open), the new-meeting page, and the action items view
+2. Capture dashboard, meeting detail (notes tab open), the new-meeting page, and the action items view
 3. Toggle dark mode in the top nav for one variant
 
 ---
@@ -58,7 +58,7 @@ This repo implements that pipeline end to end:
 - **Surface** — sidebar dashboard with KPI cards, optimistic action-item updates,
   full-text search, Markdown export, light/dark mode.
 
-Mock-AI mode is a deliberate design choice: the full product — extraction,
+Mock mode is a deliberate design choice: the full product — extraction,
 action tracking, Markdown export — works without external dependencies, so
 the project clones cleanly and runs with a single command.
 
@@ -99,7 +99,7 @@ backend/app/
   schemas/        Pydantic request/response models
   models/         SQLAlchemy ORM (Meeting, MeetingNotes, ActionItem)
   repositories/   DB access only (no business rules)
-  services/       business logic: meetings, notes generation, mock AI,
+  services/       business logic: meetings, notes generation, mock provider,
                   provider-abstracted LLM, Markdown export
   db/             engine, session, declarative base
 ```
@@ -125,7 +125,7 @@ Then in the browser:
 
 1. **Dashboard** (http://localhost:3000) — KPI cards populate with total
    meetings, open and completed action items, and the notes-generated rate.
-2. **Open a meeting** — *Q3 Launch Planning* is a good start. The AI Notes tab
+2. **Open a meeting** — *Q3 Launch Planning* is a good start. The Notes tab
    shows the executive summary with a confidence bar, key decisions, an
    unresolved question, and action items with detected owners and due dates.
 3. **Track an action item** — tick the checkbox or use the dropdown to move
@@ -197,7 +197,7 @@ All endpoints are documented interactively at http://localhost:8000/docs
 | GET    | `/meetings/{id}`                  | Get one meeting with notes + actions         |
 | PATCH  | `/meetings/{id}`                  | Update title / participants / transcript     |
 | DELETE | `/meetings/{id}`                  | Delete meeting + cascade                     |
-| POST   | `/meetings/{id}/generate-notes`   | Run AI generation; replaces action items     |
+| POST   | `/meetings/{id}/generate-notes`   | Run Note generation; replaces action items     |
 | GET    | `/meetings/{id}/export`           | Return rendered Markdown                     |
 | PATCH  | `/action-items/{id}`              | Update status / description / owner          |
 

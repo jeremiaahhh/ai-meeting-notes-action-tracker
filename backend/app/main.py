@@ -34,7 +34,7 @@ def create_app() -> FastAPI:
     configure_logging(settings.log_level)
 
     app = FastAPI(
-        title="AI Meeting Notes & Action Tracker",
+        title="Meeting Notes & Action Tracker",
         version="1.0.0",
         description=(
             "Transforms meeting transcripts into structured summaries, decisions, "

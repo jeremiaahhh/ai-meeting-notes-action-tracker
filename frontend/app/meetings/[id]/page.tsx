@@ -50,7 +50,7 @@ export default function MeetingDetailPage() {
     try {
       const updated = await api.generateNotes(data.id);
       await mutate(updated, { revalidate: false });
-      toast.success(data.notes ? "Notes regenerated" : "AI notes generated");
+      toast.success(data.notes ? "Notes regenerated" : "Notes generated");
     } catch (err) {
       toast.error(err instanceof ApiError ? err.message : "Failed to generate notes");
     } finally {
@@ -180,7 +180,7 @@ export default function MeetingDetailPage() {
 
       <Tabs defaultValue="notes" className="space-y-4">
         <TabsList>
-          <TabsTrigger value="notes">AI notes</TabsTrigger>
+          <TabsTrigger value="notes">notes</TabsTrigger>
           <TabsTrigger value="actions">Action items ({data.action_items.length})</TabsTrigger>
           <TabsTrigger value="transcript">Transcript</TabsTrigger>
         </TabsList>
@@ -194,7 +194,7 @@ export default function MeetingDetailPage() {
             <EmptyState
               icon={CheckSquare}
               title="No action items yet"
-              description="Generate AI notes to extract action items from the transcript."
+              description="Generate notes to extract action items from the transcript."
             />
           ) : (
             <ul className="space-y-3">

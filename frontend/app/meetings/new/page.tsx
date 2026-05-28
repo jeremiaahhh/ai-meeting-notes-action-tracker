@@ -47,7 +47,7 @@ export default function NewMeetingPage() {
       if (generateAfter && transcript.trim()) {
         try {
           await api.generateNotes(meeting.id);
-          toast.success("AI notes generated");
+          toast.success("Notes generated");
         } catch (err) {
           toast.error(err instanceof ApiError ? err.message : "Failed to generate notes");
         }

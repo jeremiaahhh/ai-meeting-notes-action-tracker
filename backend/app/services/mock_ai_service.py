@@ -1,4 +1,4 @@
-"""Deterministic mock AI used when no provider key is configured.
+"""Deterministic mock provider used when no provider key is configured.
 
 The mock is more than a placeholder — it actually parses the transcript so
 that demos look credible. It looks for decision/action/question cues and

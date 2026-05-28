@@ -15,7 +15,7 @@ in mock mode — no API keys required.
 
 ## Backend layering
 
-The backend follows a strict layered architecture so the AI integration can
+The backend follows a strict layered architecture so the LLM integration can
 swap providers without leaking into the API surface or storage layer.
 
 ```
@@ -46,7 +46,7 @@ backend/app/
 
 ```
 Meeting (id, title, participants, transcript, status, error_message, …)
-  ├── MeetingNotes (1:1)   ← AI-generated summary, decisions, questions, …
+  ├── MeetingNotes (1:1)   ← auto-generated summary, decisions, questions, …
   └── ActionItem (1:N)     ← description, owner, due_date, status
 ```
 
@@ -82,7 +82,7 @@ sequenceDiagram
     API-->>UI: Meeting (with notes + action items)
 ```
 
-## AI provider abstraction
+## LLM provider abstraction
 
 `LLMService` is the entry point. It owns three responsibilities:
 

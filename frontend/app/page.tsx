@@ -137,7 +137,7 @@ export default function DashboardPage() {
           <CardContent className="space-y-4 text-sm">
             <StepRow num={1} title="Create a meeting" body="Add a title and the participants who joined." />
             <StepRow num={2} title="Paste the transcript" body="Use any chat-style or speaker-labeled transcript." />
-            <StepRow num={3} title="Generate notes" body="The AI extracts decisions, action items, owners, and dates." />
+            <StepRow num={3} title="Generate notes" body="The Extracts decisions, action items, owners, and dates." />
             <StepRow num={4} title="Track follow-ups" body="Tick items as you complete them and export to Markdown." />
           </CardContent>
         </Card>

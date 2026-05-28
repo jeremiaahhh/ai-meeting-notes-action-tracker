@@ -58,7 +58,7 @@ export default function ActionItemsPage() {
         <EmptyState
           icon={CheckSquare}
           title="No action items yet"
-          description="Generate AI notes from a meeting transcript to populate this view."
+          description="Generate notes from a meeting transcript to populate this view."
         />
       ) : (
         <div className="space-y-6">

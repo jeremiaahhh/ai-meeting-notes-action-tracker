@@ -14,7 +14,7 @@ class ActionItemDraft(BaseModel):
 
 
 class GeneratedNotes(BaseModel):
-    """Structured payload returned by the AI notes generator."""
+    """Structured payload returned by the notes generator."""
 
     executive_summary: str = Field(default="")
     key_decisions: list[str] = Field(default_factory=list)

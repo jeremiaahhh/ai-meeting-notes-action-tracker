@@ -8,7 +8,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
 export const metadata: Metadata = {
-  title: "AI Meeting Notes & Action Tracker",
+  title: "Meeting Notes & Action Tracker",
   description:
     "Turn raw meeting transcripts into structured summaries, decisions, action items and open questions.",
 };

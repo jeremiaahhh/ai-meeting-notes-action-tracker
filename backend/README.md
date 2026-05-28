@@ -1,6 +1,6 @@
 # Backend — FastAPI service
 
-Layered FastAPI app for the AI Meeting Notes & Action Tracker.
+Layered FastAPI app for the Meeting Notes & Action Tracker.
 See the [root README](../README.md) and [`docs/architecture.md`](../docs/architecture.md)
 for the full picture.
 
@@ -33,7 +33,7 @@ app/
   models/          → SQLAlchemy ORM
   repositories/    → DB access
   schemas/         → Pydantic
-  services/        → business logic + AI provider orchestration
+  services/        → business logic + LLM provider orchestration
   main.py          → FastAPI app factory
 tests/
 ```
