@@ -6,10 +6,10 @@ import {
   ArrowRight,
   CalendarCheck2,
   CheckCircle2,
+  FileCheck,
   FilePlus2,
   HelpCircle,
   ListChecks,
-  Sparkles,
 } from "lucide-react";
 
 import { EmptyState } from "@/components/empty-state";
@@ -72,7 +72,7 @@ export default function DashboardPage() {
               label="Notes generated"
               value={notesReady}
               hint={total > 0 ? `${Math.round((notesReady / total) * 100)}% of meetings` : "—"}
-              icon={Sparkles}
+              icon={FileCheck}
               tone="default"
             />
           </>
@@ -130,7 +130,7 @@ export default function DashboardPage() {
         <Card className="self-start">
           <CardHeader>
             <div className="flex items-center gap-2">
-              <Sparkles className="h-4 w-4 text-primary" />
+              <HelpCircle className="h-4 w-4 text-primary" />
               <CardTitle>How it works</CardTitle>
             </div>
           </CardHeader>

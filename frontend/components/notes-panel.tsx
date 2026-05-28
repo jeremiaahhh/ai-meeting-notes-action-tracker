@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, CheckCircle2, HelpCircle, Sparkles } from "lucide-react";
+import { ArrowRight, CheckCircle2, FileText, HelpCircle } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -13,8 +13,8 @@ export function NotesPanel({ meeting }: { meeting: Meeting }) {
   if (!notes) {
     return (
       <EmptyState
-        icon={Sparkles}
-        title="No AI notes yet"
+        icon={FileText}
+        title="No notes generated yet"
         description="Paste a transcript and click Generate notes to extract decisions, action items, and open questions."
       />
     );

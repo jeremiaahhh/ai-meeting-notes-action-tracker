@@ -13,7 +13,7 @@ import {
   Download,
   Loader2,
   RefreshCw,
-  Sparkles,
+  Play,
   Users,
 } from "lucide-react";
 
@@ -144,7 +144,7 @@ export default function MeetingDetailPage() {
               ) : data.notes ? (
                 <RefreshCw className="h-4 w-4" />
               ) : (
-                <Sparkles className="h-4 w-4" />
+                <Play className="h-4 w-4" />
               )}
               {data.notes ? "Regenerate notes" : "Generate notes"}
             </Button>

@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import * as React from "react";
 import { toast } from "sonner";
-import { ArrowLeft, FilePlus2, Loader2, Sparkles } from "lucide-react";
+import { ArrowLeft, FilePlus2, FileText, Loader2 } from "lucide-react";
 
 import { PageHeader } from "@/components/page-header";
 import { Button } from "@/components/ui/button";
@@ -130,8 +130,8 @@ export default function NewMeetingPage() {
         <Card className="self-start">
           <CardHeader>
             <div className="flex items-center gap-2">
-              <Sparkles className="h-4 w-4 text-primary" />
-              <CardTitle>AI summary</CardTitle>
+              <FileText className="h-4 w-4 text-primary" />
+              <CardTitle>Auto-generated summary</CardTitle>
             </div>
           </CardHeader>
           <CardContent className="space-y-4">

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -7,7 +8,6 @@ import {
   FilePlus2,
   LayoutDashboard,
   ListChecks,
-  Sparkles,
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -25,14 +25,19 @@ export function Sidebar() {
 
   return (
     <aside className="hidden md:flex md:w-64 shrink-0 flex-col border-r bg-card/40">
-      <div className="flex h-16 items-center gap-2 border-b px-6">
-        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-sm">
-          <Sparkles className="h-5 w-5" />
-        </div>
-        <div className="flex flex-col">
-          <span className="text-sm font-semibold leading-tight">Meeting Notes</span>
-          <span className="text-[11px] text-muted-foreground leading-tight">
-            AI action tracker
+      <div className="flex h-16 items-center gap-2.5 border-b px-5">
+        <Image
+          src="/logo.png"
+          alt="Meeting Notes logo"
+          width={36}
+          height={36}
+          priority
+          className="h-9 w-9 rounded-lg shadow-sm ring-1 ring-border"
+        />
+        <div className="flex flex-col leading-tight">
+          <span className="text-sm font-semibold">Meeting Notes</span>
+          <span className="text-[11px] text-muted-foreground">
+            Action tracker
           </span>
         </div>
       </div>

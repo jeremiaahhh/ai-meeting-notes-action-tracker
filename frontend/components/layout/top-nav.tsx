@@ -1,6 +1,7 @@
 "use client";
 
-import { Moon, Sparkles, Sun } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import * as React from "react";
@@ -27,9 +28,13 @@ export function TopNav() {
   return (
     <header className="sticky top-0 z-30 flex h-16 items-center justify-between gap-4 border-b bg-background/80 px-6 backdrop-blur">
       <Link href="/" className="md:hidden flex items-center gap-2">
-        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-          <Sparkles className="h-5 w-5" />
-        </div>
+        <Image
+          src="/logo.png"
+          alt="Meeting Notes"
+          width={36}
+          height={36}
+          className="h-9 w-9 rounded-lg shadow-sm ring-1 ring-border"
+        />
         <span className="font-semibold">Meeting Notes</span>
       </Link>
 
@@ -38,9 +43,14 @@ export function TopNav() {
           <span className={cn("h-2 w-2 rounded-full", statusColor)} />
           {statusLabel}
         </Badge>
-        <Badge variant={health?.mock_mode ? "warning" : "success"} className="hidden md:inline-flex">
-          <Sparkles className="h-3 w-3" />
-          {health?.mock_mode ? "Mock AI" : `Live · ${provider}`}
+        <Badge variant={health?.mock_mode ? "warning" : "success"} className="hidden md:inline-flex items-center gap-1.5">
+          <span
+            className={cn(
+              "h-1.5 w-1.5 rounded-full",
+              health?.mock_mode ? "bg-amber-500" : "bg-emerald-500",
+            )}
+          />
+          {health?.mock_mode ? "Mock mode" : `Live · ${provider}`}
         </Badge>
         <Button
           variant="ghost"
