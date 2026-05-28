@@ -17,6 +17,7 @@ out/
 .turbo/
 .vercel/
 *.tsbuildinfo
+next-env.d.ts
 .npm/
 
 # Editor
