@@ -222,9 +222,9 @@ log line for that request.
   },
   "action_items": [
     { "description": "Marc will draft the launch announcement by next Monday",
-      "owner": "Marc", "due_date": "2026-06-01T17:00:00Z", "status": "open" },
+      "owner": "Marc", "due_date": "2024-06-03T17:00:00Z", "status": "open" },
     { "description": "Sam will investigate the EU pricing question",
-      "owner": "Sam", "due_date": "2026-05-29T17:00:00Z", "status": "open" }
+      "owner": "Sam", "due_date": "2024-05-31T17:00:00Z", "status": "open" }
   ]
 }
 ```
@@ -335,4 +335,4 @@ Out of scope for v1 but the natural next steps:
 
 ## License
 
-MIT — see [`LICENSE`](LICENSE).
+MIT — see [`LICENSE`](LICENSE). Built in 2024 as a portfolio project.

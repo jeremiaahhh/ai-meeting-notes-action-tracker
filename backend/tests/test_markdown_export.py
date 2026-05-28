@@ -11,7 +11,7 @@ def _build_meeting() -> Meeting:
         id="m1",
         title="Roadmap Sync",
         participants="Anna, Marc",
-        meeting_date=datetime(2026, 1, 15, 14, 0, tzinfo=timezone.utc),
+        meeting_date=datetime(2024, 1, 15, 14, 0, tzinfo=timezone.utc),
         transcript="Anna: hello.",
         status=MeetingStatus.READY,
     )
@@ -33,7 +33,7 @@ def _build_meeting() -> Meeting:
             position=0,
             description="Draft launch announcement",
             owner="Marc",
-            due_date=datetime(2026, 1, 20, 17, 0, tzinfo=timezone.utc),
+            due_date=datetime(2024, 1, 20, 17, 0, tzinfo=timezone.utc),
             status=ActionItemStatus.OPEN,
         ),
         ActionItem(
