@@ -1,0 +1,15 @@
+Title: Q3 Launch Planning
+Participants: Anna, Marc, Sam, Priya
+
+Anna: Welcome everyone. The goal today is to lock in the Q3 launch plan for the new billing dashboard.
+Marc: We decided to ship the new dashboard on July 15. Marketing will prepare the launch post by Friday.
+Anna: Action item: Marc will draft the launch announcement by next Monday.
+Sam: We still don't know how we want to handle EU pricing for the enterprise tier.
+Anna: We agreed to keep the legacy export endpoint until Q4 so existing customers don't break.
+Marc: Owner: Sam will investigate the EU pricing question and report back by Friday.
+Priya: One more thing — do we need a regional rollout, or is it global day-one?
+Anna: We decided to do a global rollout, but we'll keep a kill switch in case latency spikes.
+Marc: Action item: Priya will set up the kill switch dashboard by next Wednesday.
+Anna: Final action item: I'll schedule a launch readiness review for next Tuesday.
+Sam: Open question — who owns the press follow-up after launch?
+Anna: Let's leave that for next session. Meeting closed.

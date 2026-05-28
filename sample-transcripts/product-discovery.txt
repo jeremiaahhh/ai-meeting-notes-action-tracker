@@ -1,0 +1,22 @@
+Title: Product Discovery — Onboarding Friction
+Participants: Hana (PM), Tom (Design), Greg (Eng), Olivia (Research)
+
+Hana: We have three discovery interviews to debrief. The headline: new users
+are bouncing on step 3 of onboarding, the workspace setup step.
+Olivia: Two out of three users said they didn't know what a "workspace" meant
+in our product. One asked if it was the same as a Slack workspace.
+Greg: So the labels are wrong, not the flow.
+Tom: We agreed to rename "Workspace" to "Team" in the onboarding copy, but keep
+it as Workspace in the settings.
+Hana: Action item: Tom will draft a copy variant by Thursday.
+Greg: Owner: Greg will run an A/B test next sprint on the renamed step.
+Olivia: We still don't know whether the friction shifts to step 4 if we just
+fix the label. That's an open question.
+Hana: Decision: we will not change the underlying data model — only the
+user-facing copy.
+Tom: Action item: Olivia will recruit 5 more participants by next Friday.
+Hana: Final decision — we'll keep the "Add teammates" prompt where it is and
+revisit if A/B numbers are flat.
+Greg: One more — should we localize the new copy before testing, or after?
+Hana: Open question, let's loop in Eva from i18n.
+Hana: Meeting closed.

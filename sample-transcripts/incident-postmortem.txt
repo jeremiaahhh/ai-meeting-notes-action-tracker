@@ -1,0 +1,21 @@
+Title: Incident Postmortem — API Latency Spike
+Participants: Jordan (IC), Lee (SRE), Ramon (Backend), Mei (Product)
+
+Jordan: Thanks for joining. Quick recap — yesterday between 14:02 and 14:38 UTC we
+saw P95 latency on /search climb from 180ms to 2.4 seconds, affecting roughly
+4% of customers.
+Lee: Root cause was a slow query against the new embeddings index. We agreed
+to add a read-replica for the embeddings cluster.
+Ramon: We decided to roll back the index change tonight at 22:00 UTC and ship a
+patched version next week.
+Mei: Action item: Ramon will write the rollback runbook by EOD tomorrow.
+Lee: Owner: Lee will provision the read replica by Friday and validate failover.
+Jordan: We still don't know whether the spike correlates with the marketing
+push. Open question for the data team.
+Mei: Action item: Mei will follow up with the data team by Wednesday to confirm.
+Lee: We agreed not to change the SLO target for this quarter; instead we'll
+beef up alerting.
+Jordan: Action item: Jordan will draft an updated alert policy by next Monday.
+Ramon: Question — do we need to notify enterprise customers proactively?
+Jordan: Decision: yes, customer success will send a heads-up email by EOD today.
+Jordan: Last call — anything else? Meeting closed.
